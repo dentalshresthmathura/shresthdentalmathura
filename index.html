@@ -243,73 +243,101 @@
   </div>
 </section>
 
-<section class="booking-sec" id="booking" style="padding: 80px 0; background: #f8f9fa;">
-  <div class="container" style="max-width: 800px; margin: 0 auto;">
-    <div class="sec-head reveal" style="text-align: center; margin-bottom: 40px;">
-      <span class="sec-label">Online Reservation</span>
-      <h2>Book Your Priority Appointment</h2>
-      <p>Fill the form below and we will contact you shortly to confirm your visit.</p>
+<section class="booking-sec" id="booking" style="padding: 100px 0; background: #080808; position: relative; overflow: hidden;">
+  <!-- Decorative background elements -->
+  <div style="position: absolute; top: -10%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+  <div style="position: absolute; bottom: -10%; left: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+
+  <div class="container" style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
+    <div class="sec-head reveal" style="text-align: center; margin-bottom: 60px;">
+      <span class="sec-label" style="background: rgba(212,175,55,0.1); color: #D4AF37; padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border: 1px solid rgba(212,175,55,0.2);">VIP Access</span>
+      <h2 style="font-size: 3.5rem; margin-top: 20px; color: #FFF; font-family: 'Outfit', sans-serif;">Book Your <span style="color: #D4AF37;">Priority</span> Visit</h2>
+      <p style="color: #A0AEC0; font-size: 1.2rem; max-width: 600px; margin: 15px auto 0; line-height: 1.6;">Experience international-standard dental care in an ambiance of pure luxury.</p>
     </div>
     
-    <div class="booking-form-wrap" style="background: #FFF; padding: 40px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+    <div class="booking-form-wrap" style="background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 60px; border-radius: 40px; border: 1px solid rgba(212,175,55,0.15); box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
       <form id="appointmentForm">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-          <div>
-            <label style="display:block; margin-bottom: 8px; font-weight: 600;">Patient Name</label>
-            <input type="text" id="pName" placeholder="Your Full Name" style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+          <div class="form-group">
+            <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">PATIENT NAME</label>
+            <input type="text" id="pName" placeholder="Full Name" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);" required>
           </div>
-          <div>
-            <label style="display:block; margin-bottom: 8px; font-weight: 600;">Phone Number</label>
-            <input type="tel" id="pPhone" placeholder="+91 00000 00000" style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
-          </div>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-          <div>
-            <label style="display:block; margin-bottom: 8px; font-weight: 600;">Email Address</label>
-            <input type="email" id="pEmail" placeholder="email@example.com" style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-          </div>
-          <div>
-            <label style="display:block; margin-bottom: 8px; font-weight: 600;">Treatment Service</label>
-            <select id="pService" style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
-              <option value="" disabled selected>Select Service</option>
-              <option value="Dental Implants">Dental Implants</option>
-              <option value="Root Canal">Root Canal Treatment</option>
-              <option value="Smile Designing">Smile Designing</option>
-              <option value="Braces / Aligners">Braces / Aligners</option>
-              <option value="General Checkup">General Checkup</option>
+          <div class="form-group">
+            <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">CHOOSE SERVICE</label>
+            <select id="pService" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; cursor: pointer; appearance: auto;" required>
+              <option value="" disabled selected style="background: #111; color: #fff;">Select Treatment</option>
+              <option value="Dental Implants" style="background: #111; color: #fff;">Dental Implants & Replacement</option>
+              <option value="Root Canal" style="background: #111; color: #fff;">Painless Root Canal</option>
+              <option value="Smile Designing" style="background: #111; color: #fff;">Smile Designing & Veneers</option>
+              <option value="Braces / Aligners" style="background: #111; color: #fff;">Clear Aligners / Braces</option>
+              <option value="General Checkup" style="background: #111; color: #fff;">Comprehensive Checkup</option>
             </select>
           </div>
         </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-          <div>
-            <label style="display:block; margin-bottom: 8px; font-weight: 600;">Preferred Date</label>
-            <input type="date" id="pDate" style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+          <div class="form-group">
+            <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">PREFERRED DATE</label>
+            <input type="date" id="pDate" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; color-scheme: dark;" required>
           </div>
-          <div>
-            <label style="display:block; margin-bottom: 8px; font-weight: 600;">Preferred Time</label>
-            <input type="time" id="pTime" style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
+          <div class="form-group">
+            <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">PREFERRED TIME</label>
+            <input type="time" id="pTime" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; color-scheme: dark;" required>
           </div>
         </div>
 
-        <div style="margin-bottom: 30px;">
-          <label style="display:block; margin-bottom: 8px; font-weight: 600;">Message (Optional)</label>
-          <textarea id="pMessage" rows="3" placeholder="Tell us about your concern..." style="width:100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+          <div class="form-group">
+            <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">PHONE NUMBER</label>
+            <input type="tel" id="pPhone" placeholder="+91 00000 00000" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);" required>
+          </div>
+          <div class="form-group">
+            <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">EMAIL ADDRESS</label>
+            <input type="email" id="pEmail" placeholder="email@example.com" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);">
+          </div>
         </div>
 
-        <button type="submit" id="subBtn" style="width: 100%; background: #007bff; color: #FFF; padding: 15px; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: 0.3s;">Confirm Appointment Request</button>
+        <div style="margin-bottom: 40px;">
+          <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">ADDITIONAL DETAILS (OPTIONAL)</label>
+          <textarea id="pMessage" rows="4" placeholder="Briefly describe your concern..." style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; resize: none; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);"></textarea>
+        </div>
+
+        <button type="submit" id="subBtn" style="width: 100%; background: linear-gradient(135deg, #D4AF37 0%, #B38B22 100%); color: #000; padding: 22px; border: none; border-radius: 20px; font-size: 1.2rem; font-weight: 800; cursor: pointer; transition: 0.4s; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);">
+          Confirm Reservation
+        </button>
       </form>
     </div>
   </div>
+
+  <style>
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: #D4AF37 !important;
+      background: rgba(212, 175, 55, 0.05) !important;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.1) !important;
+    }
+    #pService option {
+      background-color: #1a1a1a;
+      color: #FFF;
+    }
+    #subBtn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+      filter: brightness(1.1);
+    }
+    #subBtn:active {
+      transform: translateY(0);
+    }
+  </style>
 </section>
 
 <script>
   document.getElementById('appointmentForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = document.getElementById('subBtn');
-    btn.innerText = 'Processing...';
+    const originalText = btn.innerText;
+    btn.innerText = 'SECURING YOUR SLOT...';
     btn.disabled = true;
+    btn.style.opacity = '0.8';
 
     const data = {
       name: document.getElementById('pName').value,
@@ -326,14 +354,23 @@
       body: JSON.stringify(data)
     })
     .then(() => {
-      btn.innerText = 'Sent Successfully! ✅';
-      btn.style.background = '#28a745';
-      alert('Thank you! Your request has been saved to the doctor\'s Google Sheet.');
+      btn.innerText = 'RESERVATION SUCCESSFUL! ✅';
+      btn.style.background = '#34A853';
+      btn.style.color = '#FFF';
+      btn.style.opacity = '1';
+      alert('Thank you! Your luxury dental experience at Dental Shresth has been reserved. We will contact you shortly.');
       document.getElementById('appointmentForm').reset();
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.background = 'linear-gradient(135deg, #D4AF37 0%, #B38B22 100%)';
+        btn.style.color = '#000';
+        btn.disabled = false;
+      }, 5000);
     })
     .catch(() => {
-      btn.innerText = 'Error! Try Again';
+      btn.innerText = 'ERROR! PLEASE RETRY';
       btn.disabled = false;
+      btn.style.opacity = '1';
     });
   });
 </script>
