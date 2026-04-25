@@ -251,7 +251,7 @@
   <div class="container" style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
     <div class="sec-head reveal" style="text-align: center; margin-bottom: 60px;">
       <span class="sec-label" style="background: rgba(212,175,55,0.1); color: #D4AF37; padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border: 1px solid rgba(212,175,55,0.2);">VIP Access</span>
-      <h2 style="font-size: 3.5rem; margin-top: 20px; color: #FFF; font-family: 'Outfit', sans-serif;">Book Your <span style="color: #D4AF37;">Priority</span> Visit</h2>
+      <h2 style="font-size: 3.5rem; margin-top: 20px; color: #FFF; font-family: 'Outfit', sans-serif;">Book Your <span style="color: #D4AF37;">Premium</span> Visit</h2>
       <p style="color: #A0AEC0; font-size: 1.2rem; max-width: 600px; margin: 15px auto 0; line-height: 1.6;">Experience international-standard dental care in an ambiance of pure luxury.</p>
     </div>
     
@@ -264,13 +264,16 @@
           </div>
           <div class="form-group">
             <label style="display:block; margin-bottom: 12px; font-weight: 500; color: #E2E8F0; font-size: 0.95rem;">CHOOSE SERVICE</label>
-            <select id="pService" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; cursor: pointer; appearance: auto;" required>
-              <option value="" disabled selected style="background: #111; color: #fff;">Select Treatment</option>
-              <option value="Dental Implants" style="background: #111; color: #fff;">Dental Implants & Replacement</option>
-              <option value="Root Canal" style="background: #111; color: #fff;">Painless Root Canal</option>
-              <option value="Smile Designing" style="background: #111; color: #fff;">Smile Designing & Veneers</option>
-              <option value="Braces / Aligners" style="background: #111; color: #fff;">Clear Aligners / Braces</option>
-              <option value="General Checkup" style="background: #111; color: #fff;">Comprehensive Checkup</option>
+            <select id="pService" style="width:100%; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: #FFF; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: 0.4s; cursor: pointer; appearance: none;" required>
+              <option value="" disabled selected>Select Treatment</option>
+              <option value="General Dentistry">General Dentistry</option>
+              <option value="Tooth Replacement">Tooth Replacement</option>
+              <option value="Restorative">Restorative</option>
+              <option value="Cosmetic">Cosmetic</option>
+              <option value="Orthodontics">Orthodontics</option>
+              <option value="Pediatric">Pediatric</option>
+              <option value="Surgery & Emergency">Surgery & Emergency</option>
+              <option value="Gum Treatment">Gum Treatment</option>
             </select>
           </div>
         </div>
@@ -310,14 +313,15 @@
   </div>
 
   <style>
+    /* Fix for dropdown options visibility in dark mode */
+    #pService option {
+      background-color: #1a1a1a;
+      color: #FFF;
+    }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       border-color: #D4AF37 !important;
       background: rgba(212, 175, 55, 0.05) !important;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.1) !important;
-    }
-    #pService option {
-      background-color: #1a1a1a;
-      color: #FFF;
     }
     #subBtn:hover {
       transform: translateY(-5px);
