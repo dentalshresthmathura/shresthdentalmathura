@@ -29,6 +29,7 @@
       <a href="#about" class="nav-link">About</a>
       <a href="#why-us" class="nav-link">Why Us</a>
       <a href="#contact" class="nav-link">Contact</a>
+      <a href="upi://pay?pa=9990066965@ptyes&pn=Shresth%20Dental&cu=INR&am=500.00" class="nav-link" style="color: #34A853; font-weight: 600;"><i class="fa-solid fa-indian-rupee-sign"></i> Pay ₹500</a>
     </nav>
     <a href="https://wa.me/919990066965?text=Hello%20Dr.%20Shrey%20Vardhan,%20I%20want%20to%20book%20an%20appointment" target="_blank" class="btn btn-primary nav-cta">Book Now</a>
     <button class="burger" id="burger" onclick="document.getElementById('nav').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
@@ -398,18 +399,18 @@
       body: JSON.stringify(data)
     })
     .then(() => {
-      btn.innerText = 'RESERVATION SUCCESSFUL! ✅';
-      btn.style.background = '#34A853';
-      btn.style.color = '#FFF';
-      btn.style.opacity = '1';
-      alert('Thank you! Your luxury dental experience at Dental Shresth has been reserved. We will contact you shortly.');
-      document.getElementById('appointmentForm').reset();
-      setTimeout(() => {
-        btn.innerText = originalText;
-        btn.style.background = 'linear-gradient(135deg, #D4AF37 0%, #B38B22 100%)';
-        btn.style.color = '#000';
-        btn.disabled = false;
-      }, 5000);
+      const formContainer = document.querySelector('.booking-form-wrap');
+      formContainer.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px;">
+          <div style="width: 80px; height: 80px; background: rgba(52, 168, 83, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fa-solid fa-check" style="font-size: 2.5rem; color: #34A853;"></i>
+          </div>
+          <h3 style="color: #FFF; font-size: 2rem; font-family: 'Outfit', sans-serif; margin-bottom: 10px;">Slot Reserved!</h3>
+          <p style="color: #A0AEC0; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">Thank you for choosing Shresth Dental. To confirm your appointment, please pay the fixed consultation fee of <strong>₹500</strong>.</p>
+          <a href="upi://pay?pa=9990066965@ptyes&pn=Shresth%20Dental&cu=INR&am=500.00" style="display: inline-block; width: 100%; max-width: 300px; background: #34A853; color: #FFF; padding: 18px 20px; border-radius: 15px; font-size: 1.1rem; font-weight: 600; text-decoration: none; box-shadow: 0 10px 30px rgba(52, 168, 83, 0.3); transition: 0.3s;"><i class="fa-solid fa-indian-rupee-sign" style="margin-right: 10px;"></i> Pay ₹500 via UPI</a>
+          <p style="margin-top: 20px; color: #718096; font-size: 0.9rem;">UPI ID: <strong style="color: #FFF;">9990066965@ptyes</strong></p>
+        </div>
+      `;
     })
     .catch(() => {
       btn.innerText = 'ERROR! PLEASE RETRY';
